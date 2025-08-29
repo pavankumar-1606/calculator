@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        .whole {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .top {
+            width: 100%;
+            height: 28vh;
+            background-color: rgb(40, 39, 39);
+            padding: 10px;
+        }
+
+        .logo {
+            color: aliceblue;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+            font-size: 40px;
+        }
+
+        .bottom {
+            width: 100%;
+            height: 72vh;
+            background-color: black;
+            display: -ms-inline-grid;
+            padding-top: 2vh;
+        }
+
+        .but {
+            width: 53vh;
+            height: 16vh;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: large;
+            border-radius: 1vh;
+            border: none;
+            margin: 0.5vh;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .but:hover {
+            background-color: rgb(198, 197, 197);
+        }
+
+        .btn {
+            width: 54vh;
+            height: 16vh;
+            border-radius: 1vh;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            background: #563dc5;
+            color: aliceblue;
+            cursor: pointer;
+            transition: all 450ms ease-in-out;
+        }
+
+        .sparkle {
+            fill: #AAAAAA;
+            transition: all 800ms ease;
+        }
+
+        .text {
+            font-weight: 600;
+            color: #AAAAAA;
+            font-size: medium;
+        }
+
+        .btn:hover {
+            background: linear-gradient(0deg, #A47CF3, #683FEA);
+            box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
+                inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
+                0px 0px 0px 4px rgba(255, 255, 255, 0.2),
+                0px 0px 180px 0px #9917FF;
+            transform: translateY(-2px);
+        }
+
+        .btn:hover .text {
+            color: white;
+        }
+
+        .btn:hover .sparkle {
+            fill: white;
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="whole">
+        <div class="top">
+            <h1 id="result" class="rest">Enter</h1>
+            <p class="logo" id="cal">&#8512; Calculator</p>
+
+        </div>
+        <div class="bottom">
+            <button class="but" onclick="num('1')">1</button>
+            <button class="but" onclick="num('2')">2</button>
+            <button class="but" onclick="num('3')">3</button>
+            <button class="but" style="background-color: rgb(110, 103, 128);color: rgb(255, 255, 255);"
+                onclick="num('+')">+</button>
+            <button class="but" onclick="num('4')">4</button>
+            <button class="but" onclick="num('5')">5</button>
+            <button class="but" onclick="num('6')">6</button>
+            <button class="but" style="background-color: rgb(110, 103, 128);color: rgb(255, 255, 255);"
+                onclick="num('_')">_</button>
+            <button class="but" onclick="num('7')">7</button>
+            <button class="but" onclick="num('8')">8</button>
+            <button class="but" onclick="num('9')">9</button>
+            <button class="but" style="background-color: rgb(110, 103, 128);color: rgb(255, 255, 255);"
+                onclick="num('x')">x</button>
+            <button class="but" onclick="num('.')">.</button>
+            <button class="but" onclick="num('0')">0</button>
+            <button class="btn" onclick="num('=')">=</button>
+            <button class="but" style="background-color: rgb(110, 103, 128);color: rgb(255, 255, 255);"
+                onclick="num('/')">/</button>
+            <button class="but" onclick="num('ac')">AC</button>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script type="export" src="script.js"></script>
+</body>
+
+</html>
